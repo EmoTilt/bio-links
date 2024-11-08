@@ -1,0 +1,45 @@
+.blockscreen {
+    position: fixed;
+    animation-duration: 1.5s;
+    animation-name: blockscreen;
+    width: 100%;
+    height: 100%;
+    top: -110vh;
+    z-index: 5;
+    background-color: var(--color1);
+    left: 0;
+    hr {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 2px;
+    }
+}
+
+.white {
+    .blockscreen {
+        background-color: var(--color1);
+        hr {
+            background-color: var(--color2);
+        }
+    }
+}
+
+.black {
+    .blockscreen {
+        background-color: var(--color2);
+        hr {
+            background-color: var(--color1);
+        }
+    }
+}
+
+@keyframes blockscreen {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -110vh
+    }
+}

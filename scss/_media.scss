@@ -1,0 +1,37 @@
+@media (max-width: 720px) {
+    .navbar {
+        margin-top: 20%;
+    }
+    
+    .avatar {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media (max-width: 550px) {
+    .socialinks {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .socialink {
+        position: relative;
+        display: flex;
+        width: 100%;
+        border-radius: 30px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 8px;
+        svg {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    .link_name {
+        display: block;
+    }
+}

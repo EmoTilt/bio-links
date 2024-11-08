@@ -1,0 +1,160 @@
+.navbar {
+    margin-top: 11%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.white {
+    .name {
+        &:before {
+            background: var(--color2);
+        }
+    }
+    .description {
+        &:before {
+            background: var(--color2);
+        }
+    }
+}
+
+.black {
+    .name {
+        &:before {
+            background: #4edfe4;
+        }
+    }
+    .description {
+        &:before {
+            background: #4edfe4;
+        }
+    }
+}
+
+.name {
+    font-size: 34px;
+    font-weight: 700;
+    -webkit-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    -moz-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    position: relative;
+    margin: 12px 0;
+    z-index: 1;
+    &:before {
+        content: "";
+        transition: all 0.3s;
+        position: absolute;
+        z-index: -1;
+        height: 6px;
+        right: 5px;
+        width: 105%;
+        left: -5px;
+        top: 42%;
+        opacity: 0;
+    }
+    &:hover {
+        &:before {
+            opacity: 100%;
+        }
+    }
+}
+
+.description {
+    font-size: 16px;
+    position: relative;
+    font-weight: 400;
+    z-index: 1;
+    -webkit-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    -moz-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.17);
+    &:before {
+        content: "";
+        transition: all 0.3s;
+        position: absolute;
+        z-index: -1;
+        height: 3px;
+        right: 5px;
+        left: 5px;
+        top: 130%;
+        opacity: 0;
+        border-radius: 3px;
+    }
+    &:hover {
+        &:before {
+            opacity: 100%;
+        }
+    }
+}
+
+.socialinks {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.socialink {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    margin: 0 6px 6px;
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.white {
+    .socialink {
+        background-color: var(--color2);
+        border: 1px solid var(--color1);
+        svg {
+            path {
+                fill: var(--color1);
+            }
+        }
+    }
+
+    .link_name {
+        color: var(--color1);
+    }
+}
+
+
+.black {
+    .socialink {
+        background-color: var(--color1);
+        border: 1px solid var(--color2);
+        svg {
+            path {
+                fill: var(--color2);
+            }
+        }
+    }
+
+    .link_name {
+        color: var(--color2);
+    }
+}
+
+.link_name {
+    display: none;
+    font-size: 18px;
+    margin-left: 12px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}

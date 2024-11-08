@@ -1,0 +1,78 @@
+@import "_reset";
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/inter_regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/inter_bold.ttf);
+    font-weight: 700;
+}
+
+:root {
+    --color1: #28292c;
+    --color2: #d8dbe0;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+}
+
+.black {
+    background-color: var(--color1);
+    color: var(--color2);
+
+    .fullscreen {
+        background: url("../assets/wallpaper_black.jpg") no-repeat center center/cover;
+        background-position: 60% 50%
+    }
+
+}
+
+.white {
+    background-color: var(--color2);
+    color: var(--color1);
+
+    .fullscreen {
+        background: url("../assets/wallpaper_white.jpg") no-repeat center center/cover;;
+        background-position: 64% 50%
+    }
+}
+
+@import "_blockscreen";
+@import "_slider";
+
+body {
+    font-family: "Inter";
+    transition: all 0.3s;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-image 0.3s ease-out; 
+    position: relative;
+    overflow: hidden;
+}
+
+@import "_header";
+
+.hover {
+    box-shadow: 0 0 1px transparent;
+    transition-duration: 0.5s;
+    transition-property: box-shadow, transform;
+    &:hover {
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(20, 34, 46, 0.2);
+        transform: scale(1.1);
+    }
+}
+
+@import "_section";
+@import "_media";
