@@ -429,6 +429,11 @@ body {
   text-align: center;
 }
 
+.hatsune_gif {
+  position: absolute;
+  bottom: 0;
+}
+
 @media (max-width: 720px) {
   .navbar {
     margin-top: 20%;
@@ -460,5 +465,8 @@ body {
   }
   .link_name {
     display: block;
+  }
+  .hatsune_gif {
+    display: none;
   }
 }
